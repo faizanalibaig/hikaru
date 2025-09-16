@@ -1,0 +1,11 @@
+node_modules/
+dist/
+build/
+coverage/
+*.min.js
+
+.env
+.env.example
+
+package-lock.json
+yarn.lock

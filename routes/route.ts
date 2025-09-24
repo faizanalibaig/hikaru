@@ -1,4 +1,5 @@
 import express, { Request, Response } from "express";
+const { global_error_handler } = require("../utils/global-error-handler");
 const router = express.Router();
 
 router.route("/").all((req: Request, res: Response) => {
@@ -11,5 +12,7 @@ router.use((req: Request, res: Response) => {
     message: `Can't find ${req.originalUrl} on this server!`,
   });
 });
+
+router.use(global_error_handler);
 
 module.exports = router;

@@ -13,6 +13,4 @@ router.use((req: Request, res: Response) => {
   });
 });
 
-router.use(global_error_handler);
-
 module.exports = router;

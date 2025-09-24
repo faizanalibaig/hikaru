@@ -2,6 +2,11 @@
   "name": "hikaru",
   "version": "v0.0.1",
   "main": "dist/server.js",
+  "_moduleAliases": {
+    "@config": "config",
+    "@routes": "routes",
+    "@helper": "helper"
+  },
   "scripts": {
     "build": "tsc",
     "start": "ts-node server.ts",
@@ -22,6 +27,7 @@
     "cors": "^2.8.5",
     "dotenv": "^17.2.2",
     "express": "^5.1.0",
+    "module-alias": "^2.2.3",
     "mongoose": "^8.18.2",
     "nodemon": "^3.1.10",
     "winston": "^3.17.0"

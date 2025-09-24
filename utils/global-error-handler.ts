@@ -1,7 +1,7 @@
 import { Request, Response, NextFunction } from "express";
 
 exports.global_error_handler = (
-  err: AppError,
+  err: any,
   req: Request,
   res: Response,
   next: NextFunction

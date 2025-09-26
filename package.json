@@ -2,14 +2,13 @@
   "name": "hikaru",
   "version": "v0.0.1",
   "main": "dist/server.js",
-  "_moduleAliases": {
-    "@config": "config",
-    "@routes": "routes",
-    "@helper": "helper"
+  "engines": {
+    "node": ">=18.0.0"
   },
   "scripts": {
     "build": "tsc",
     "start": "node dist/server.js",
+    "postinstall": "npm run build",
     "dev": "nodemon --watch server.ts --exec ts-node server.ts",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
@@ -33,10 +32,14 @@
     "winston": "^3.17.0"
   },
   "devDependencies": {
+    "@types/cors": "^2.8.19",
     "@types/express": "^5.0.3",
+    "@types/morgan": "^1.9.10",
+    "@types/node": "^24.5.2",
     "eslint": "^9.35.0",
     "husky": "^9.1.7",
     "prettier": "^3.6.2",
-    "ts-node": "^10.9.2"
+    "ts-node": "^10.9.2",
+    "typescript": "^5.0.0"
   }
 }

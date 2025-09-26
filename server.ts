@@ -1,13 +1,12 @@
 require('dotenv').config();
-require('module-alias/register');
 
 const http = require('http');
 import express from 'express';
 const mongoose = require('mongoose');
 const morgan = require('morgan');
 
-const logger = require(`@config/logger`);
-const AppRoutes = require(`@routes/route`);
+const logger = require('./config/logger');
+const AppRoutes = require('./routes/route');
 
 const app = express();
 const PORT = process.env.PORT || 8080;

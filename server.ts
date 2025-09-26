@@ -16,14 +16,14 @@ const server = http.createServer(app);
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-mongoose
+/* mongoose
   .connect("mongodb://admin:root123$$@mongo:27017/hikaru")
   .then(() => {
     console.log("MongoDB connected successfully!");
   })
   .catch((err: any) => {
     console.error("MongoDB connection error:", err);
-  });
+  }); */
 
 app.use(
   morgan("combined", {

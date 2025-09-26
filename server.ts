@@ -1,10 +1,10 @@
-require("dotenv").config();
-require("module-alias/register");
+require('dotenv').config();
+require('module-alias/register');
 
-const http = require("http");
-import express from "express";
-const mongoose = require("mongoose");
-const morgan = require("morgan");
+const http = require('http');
+import express from 'express';
+const mongoose = require('mongoose');
+const morgan = require('morgan');
 
 const logger = require(`@config/logger`);
 const AppRoutes = require(`@routes/route`);
@@ -26,14 +26,14 @@ app.use(express.urlencoded({ extended: true }));
   }); */
 
 app.use(
-  morgan("combined", {
+  morgan('combined', {
     stream: {
       write: (message: string) => logger.info(message.trim()),
     },
   })
 );
 
-app.use("/api/v1", AppRoutes);
+app.use('/api/v1', AppRoutes);
 
 server.listen(PORT, () => {
   console.log(`Server is running on http://localhost:${PORT}`);

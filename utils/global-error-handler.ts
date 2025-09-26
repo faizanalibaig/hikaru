@@ -1,4 +1,4 @@
-import { Request, Response, NextFunction } from "express";
+import { Request, Response, NextFunction } from 'express';
 
 exports.global_error_handler = (
   err: any,
@@ -7,7 +7,7 @@ exports.global_error_handler = (
   next: NextFunction
 ) => {
   err.status_code = err.status_code || 500;
-  err.status = err.status || "error";
+  err.status = err.status || 'error';
 
   res.status(err.status_code).json({
     status: err.status,

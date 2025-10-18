@@ -1,15 +1,13 @@
-#base image
-FROM node
+FROM node:alpine
 
-ENV MONGO_DB_USERNAME=admin \
-    MONGO_DB_PWD=qwerty 
-    
-RUN mkdir -p hikaru
+WORKDIR /usr/app
 
-COPY . /hikaru
+COPY ./package.json ./
 
-RUN npm install
+RUN npm install --ignore-scripts
 
-CMD ["node", "/hikaru/dist/server.js"]
+COPY ./ ./
 
-#docker build -t (testapp)name
+RUN npm run build
+
+CMD ["npm", "start"]

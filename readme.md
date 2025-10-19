@@ -18,4 +18,4 @@ docker run --name hikaru -p 8080:8080 faizan/hikaru:0.1
 
 ```
 
-_Note: Please comment out the MongoDB connection code in server.ts for the above process._
+_Note: Test Endpoint: /api/v1 ._
